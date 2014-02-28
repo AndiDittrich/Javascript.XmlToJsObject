@@ -1,0 +1,14 @@
+body {
+	margin: 0px;
+	padding: 20px;
+	background-color: #f0f0f0;
+	font-family: 'Open Sans', Arial, sans-serif;
+}
+
+pre {
+	background-color: #ffffff;
+	font-size: 11px;
+	padding: 5px;
+	font-family: Monospace, sans-serif;
+	border: dashed 1px #c0c0c0;
+}

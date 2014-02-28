@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Zanmantou 3 - SIMPLAX Skin
+ @source: https://raw.github.com/AndiDittrich/Archive-Zanmantou3/master/themes/simplax/simplax.xml
+!-->
+<zanmantou version="3.1">
+
+	<!-- normal UI config !-->
+	<normal>
+		<!-- video/cover settings !-->
+		<engine zindex="1" width="100%" height="100%" x="center" y="center" z="0" rx="0" ry="0" rz="0">
+			<!-- size management [native, fixed] !-->
+			<sizing>proportional</sizing>
+		</engine>	
+		
+		<!-- in this section you can define the UI buttons !-->
+		<buttons>
+
+			
+			<!-- main control bottom !-->
+			<start zindex="10" x="10%" y="bottom-5%">
+				<over>start_hover.png</over>
+				<out>start.png</out>
+			</start>
+			
+			<pause zindex="10" x="10%" y="bottom-5%">
+				<over>pause_hover.png</over>
+				<out>pause.png</out>
+			</pause>
+					
+			<fullscreenon zindex="10" x="right-15" y="top+15">
+				<over>fullscreen_hover.png</over>
+				<out>fullscreen.png</out>
+			</fullscreenon>	
+											
+		</buttons>	
+		
+		<slider>
+			<volume zindex="20" width="58" height="13" x="right-10%-13" y="bottom-5%-10" source="volume.png">
+				<mode>crop</mode>
+
+				<handle>
+				</handle>				
+			</volume>
+						
+			<!-- loading slider "behind" progress slider !-->
+			<loading zindex="24" width="80%-178" height="8" x="10%+32" y="bottom-5%-12" source="loading.png">
+				<mode>scale</mode>
+			</loading>
+						
+			<!-- progress slider !-->
+			<progress zindex="25" width="80%-178" height="8" x="10%+32" y="bottom-5%-12" source="progress.png">
+				<mode>scale</mode>
+
+				<handle>
+				</handle>				
+			</progress>			
+
+		</slider>	
+
+		<!-- info areas !-->
+		<info>
+			<!-- text area position !-->
+			<area zindex="28" width="70" height="15" x="right-10%-78" y="bottom-5%-9">
+				<value><![CDATA[{%t}:{%ts}/{%l}:{%ls}]]></value>
+				
+				<!-- text refresh interval in ms !-->
+				<refresh>500</refresh>
+				
+				<!-- overflow actions !-->
+				<overflow>
+					<!-- enable flag [true, false] !-->
+					<enable>false</enable>
+				</overflow>	
+
+				<!-- font color !-->
+				<color>0xc5fe3d</color>
+				
+				<!-- font align !-->
+				<align>center</align>
+				
+				<!-- font size in px !-->
+				<size>10</size>
+				
+				<!-- font family !-->
+				<font>Arial</font>
+				
+				<!-- font weight bold [true, false] !-->
+				<bold>true</bold>
+				
+				<!-- font style italic [true, false] !-->
+				<italic>false</italic>
+				
+				<!-- letter spacing in px !-->
+				<letterspacing>1</letterspacing>
+				
+				<!-- html enabled [true, false] !-->
+				<html>false</html>
+			</area>	
+			
+			<!-- text area position !-->
+			<area zindex="28" width="70%" height="40" x="10" y="10">
+				<value>{%p=title}</value>
+				
+				<!-- text refresh interval in ms !-->
+				<refresh>500</refresh>
+				
+				<!-- overflow actions !-->
+				<overflow>
+					<!-- enable flag [true, false] !-->
+					<enable>false</enable>
+				</overflow>	
+
+				<!-- font color !-->
+				<color>0xffffff</color>
+				
+				<!-- font align !-->
+				<align>left</align>
+				
+				<!-- font size in px !-->
+				<size>14</size>
+				
+				<!-- font family !-->
+				<font>Arial</font>
+				
+				<!-- font weight bold [true, false] !-->
+				<bold>false</bold>
+				
+				<!-- font style italic [true, false] !-->
+				<italic>false</italic>
+				
+				<!-- letter spacing in px !-->
+				<letterspacing>0</letterspacing>
+				
+				<!-- html enabled [true, false] !-->
+				<html>false</html>
+			</area>			
+		</info>
+		
+		<!-- it's possible to add some images (e.g. background or watermark) to the player !-->
+		<images>
+			<!-- voluem slider background  83x32 !-->
+			<image zindex="3" x="right-10%" y="bottom-5%">sliderbg2.png</image>
+			
+			<!-- slider bg !-->
+			<image zindex="4" width="58" height="13" x="right-10%-13" y="bottom-5%-10">volumebg.png</image>
+			
+			<!-- sliderbg !-->
+			<image zindex="2" width="80%-25-83" height="32" x="10%+27" y="bottom-5%">sliderbg.png</image>
+			
+			<!-- titlebg !-->
+			<image zindex="20" x="left" y="top">titlebg.png</image>
+		</images>	
+		
+	
+		
+		
+	
+			
+		
+	</normal>
+	<!-- // normal UI config !-->
+	
+	<!-- fullscreen UI config !-->
+	<fullscreen>
+		<!-- video/cover settings !-->
+		<engine zindex="1" width="100%" height="100%" x="center" y="center" z="0" rx="0" ry="0" rz="0">
+			<!-- size management [native, fixed] !-->
+			<sizing>fixed</sizing>
+		</engine>	
+		
+				<!-- in this section you can define the UI buttons !-->
+		<buttons>
+
+			
+			<!-- main control bottom !-->
+			<start zindex="10" x="10%" y="bottom-5%">
+				<over>start_hover.png</over>
+				<out>start.png</out>
+			</start>
+			
+			<pause zindex="10" x="10%" y="bottom-5%">
+				<over>pause_hover.png</over>
+				<out>pause.png</out>
+			</pause>
+					
+			<fullscreenoff zindex="10" x="right-15" y="top+15">
+				<over>fullscreen_hover.png</over>
+				<out>fullscreen.png</out>
+			</fullscreenoff>	
+											
+		</buttons>	
+		
+		<slider>
+			<volume zindex="20" width="58" height="13" x="right-10%-13" y="bottom-5%-10" source="volume.png">
+				<mode>crop</mode>
+
+				<handle>
+				</handle>				
+			</volume>
+						
+			<!-- loading slider "behind" progress slider !-->
+			<loading zindex="24" width="80%-178" height="8" x="10%+32" y="bottom-5%-12" source="loading.png">
+				<mode>scale</mode>
+			</loading>
+						
+			<!-- progress slider !-->
+			<progress zindex="25" width="80%-178" height="8" x="10%+32" y="bottom-5%-12" source="progress.png">
+				<mode>scale</mode>
+
+				<handle>
+				</handle>				
+			</progress>			
+
+		</slider>	
+
+		<!-- info areas !-->
+		<info>
+			<!-- text area position !-->
+			<area zindex="28" width="70" height="15" x="right-10%-78" y="bottom-5%-9">
+				<value><![CDATA[{%t}:{%ts}/{%l}:{%ls}]]></value>
+				
+				<!-- text refresh interval in ms !-->
+				<refresh>500</refresh>
+				
+				<!-- overflow actions !-->
+				<overflow>
+					<!-- enable flag [true, false] !-->
+					<enable>false</enable>
+				</overflow>	
+
+				<!-- font color !-->
+				<color>0xc5fe3d</color>
+				
+				<!-- font align !-->
+				<align>center</align>
+				
+				<!-- font size in px !-->
+				<size>10</size>
+				
+				<!-- font family !-->
+				<font>Arial</font>
+				
+				<!-- font weight bold [true, false] !-->
+				<bold>true</bold>
+				
+				<!-- font style italic [true, false] !-->
+				<italic>false</italic>
+				
+				<!-- letter spacing in px !-->
+				<letterspacing>1</letterspacing>
+				
+				<!-- html enabled [true, false] !-->
+				<html>false</html>
+			</area>	
+			
+			<!-- text area position !-->
+			<area zindex="28" width="70%" height="40" x="10" y="10">
+				<value>{%p=title}</value>
+				
+				<!-- text refresh interval in ms !-->
+				<refresh>500</refresh>
+				
+				<!-- overflow actions !-->
+				<overflow>
+					<!-- enable flag [true, false] !-->
+					<enable>false</enable>
+				</overflow>	
+
+				<!-- font color !-->
+				<color>0xffffff</color>
+				
+				<!-- font align !-->
+				<align>left</align>
+				
+				<!-- font size in px !-->
+				<size>14</size>
+				
+				<!-- font family !-->
+				<font>Arial</font>
+				
+				<!-- font weight bold [true, false] !-->
+				<bold>false</bold>
+				
+				<!-- font style italic [true, false] !-->
+				<italic>false</italic>
+				
+				<!-- letter spacing in px !-->
+				<letterspacing>0</letterspacing>
+				
+				<!-- html enabled [true, false] !-->
+				<html>false</html>
+			</area>			
+		</info>
+		
+		<!-- it's possible to add some images (e.g. background or watermark) to the player !-->
+		<images>
+			<!-- voluem slider background  83x32 !-->
+			<image zindex="3" x="right-10%" y="bottom-5%">sliderbg2.png</image>
+			
+			<!-- slider bg !-->
+			<image zindex="4" width="58" height="13" x="right-10%-13" y="bottom-5%-10">volumebg.png</image>
+			
+			<!-- sliderbg !-->
+			<image zindex="2" width="80%-25-83" height="32" x="10%+27" y="bottom-5%">sliderbg.png</image>
+			
+			<!-- titlebg !-->
+			<image zindex="20" x="left" y="top">titlebg.png</image>
+		</images>	
+		
+	</fullscreen>
+	<!-- // fullscreen UI config !-->
+	
+	
+	<!-- Zanmantou Settings !-->
+	<settings>
+		<!-- path to player images. NOTE: the image is loaded from the location "imgpath+source" !-->
+		<imgpath>simplax/</imgpath>
+		
+		<!-- path to media files. NOTE: the file is loaded from the location "mediapath+source" !-->
+		<mediapath></mediapath>
+		
+		<!-- path to thumbnail images. NOTE: the file is loaded from the location "thumbnailpath+source" !-->
+		<thumbnailpath></thumbnailpath>
+		
+		<!-- initial volume [0 ... 1.0] !-->
+		<volume>1</volume>
+		
+		<!-- initial pan [-1.0 ... 0 ... 1.0] !-->
+		<pan>0</pan>
+		
+		<!-- initial repeatall status [true, false]!-->
+		<repeatall>true</repeatall>
+		
+		<!-- initial repeat status [true, false] !-->
+		<repeat>false</repeat>
+		
+		<!-- initial shuffle status [true, false] !-->
+		<shuffle>false</shuffle>
+		
+		<!-- initial smoothing [true, false] - only for std videos - 
+			WARNING causes extremly cpu usage when playing HD videos 
+			note: it doesnt' affect stagevideo accelerated playback!
+		!-->
+		<smoothing>false</smoothing>
+		
+		<!-- use StageVideo (hardware accelerated playback) for Playback ? [true, false] - it's recommend to use this feature but 
+			note: you can't rotate the engine component or use vosionlight features 
+		!-->
+		<stagevideo>true</stagevideo>
+		
+		<!-- autostart [true, false] !-->
+		<autostart>false</autostart>
+
+	</settings>		
+	<!-- // Zanmantou Settings !-->
+	
+	<!-- additional context menu items - same as buttons !-->
+	<contextmenu>
+		<start>Start Playing</start>
+		<pause>Pause Playing</pause>
+		<next>Next Video</next>
+		<prev>Previous Video</prev>
+		<smoothingon>Enable Smoothing</smoothingon>
+		<smoothingoff>Disable Smoothing</smoothingoff>
+		<fullscreenon>Fullscreen On</fullscreenon>
+		<fullscreenoff>Fullscreen Off</fullscreenoff>
+		
+	</contextmenu>	
+	<!-- // additional context menu items !-->
+	
+</zanmantou>	
