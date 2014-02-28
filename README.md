@@ -18,18 +18,18 @@ Demo
 A example/demo page is available [here](http://static.andidittrich.de/XmlToJsObject/Example.html)
 
 **XML Content**
-![Complex XML File](/Screenshots(ComplexXmlData.jpg)
+![Complex XML File](/Screenshots/ComplexXmlData.jpg)
 
 ==>
 
 **JS-Object**
-![Converted JS Object](/Screenshots(ComplexXmlData.jpg)
+![Converted JS Object](/Screenshots/ComplexXmlData.jpg)
 
 How to use
 ----------
 This is a minimal example how to convert a XML-String into a Javascript Object
 
-	#HTML
+```html
 	<head>
 	...
 	<!-- Include XmlToJsObject -->
@@ -48,14 +48,14 @@ This is a minimal example how to convert a XML-String into a Javascript Object
 	</script>
 	...
 	</head>
-
+```
 
 Example.html Code
 -----------------
 The working example can be found [here](http://static.andidittrich.de/XmlToJsObject/Example.html)
 Note: The Example requires MooTools (used to access the DOM Elements); JSON.stringify is supported by all modern browsers
 
-	#JS
+```js
 	window.addEvent('domready', function(){
 		// get local stored xml testdata
 		var testdata1 = document.id('Testdata1').get('text');
@@ -73,14 +73,15 @@ Note: The Example requires MooTools (used to access the DOM Elements); JSON.stri
 		document.id('output2').set('text', JSON.stringify(dataObject1normal, null, 4));
 		document.id('output3').set('text', JSON.stringify(dataObject2, null, 4));
 	});
-
+```
 
 Available Methods
 -----------------
 **Description:** Converts a XMLDocument Node into a Javascript-Object
 
-	#JS
+```js
 	XmlToJsObject(xmlNode [, smartMode=true])
+```
 
 **xmlNode**
 Type: [DOM Node](http://www.w3schools.com/dom/dom_node.asp)
@@ -93,8 +94,9 @@ Optional (default=**true**) - Merge attribute names with node-names
 
 **Description:** Converts a XML String directly into a Javascript-Object
 
-	#JS
+```js
 	XmlStringToJsObject(xmlStringData [, smartMode=true])
+```
 
 **xmlStringData**
 Type: [String](http://www.w3schools.com/js/js_obj_string.asp)
