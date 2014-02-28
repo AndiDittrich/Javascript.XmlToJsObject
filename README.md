@@ -17,37 +17,38 @@ Demo
 ----
 A example/demo page is available [here](http://static.andidittrich.de/XmlToJsObject/Example.html)
 
-**XML Content**
+### XML Content
+
 ![Complex XML File](/Screenshots/ComplexXmlData.jpg)
 
 ==>
 
-**JS-Object**
-![Converted JS Object](/Screenshots/ComplexXmlData.jpg)
+### Converted JS-Object
+![Converted JS Object](/Screenshots/SimpleJsObject.jpg)
 
 How to use
 ----------
 This is a minimal example how to convert a XML-String into a Javascript Object
 
 ```html
-	<head>
+<head>
+...
+<!-- Include XmlToJsObject -->
+<script type="text/javascript" src="XmlToJsObject.js" ></script>
+
+<script type="text/javascript">
 	...
-	<!-- Include XmlToJsObject -->
-	<script type="text/javascript" src="XmlToJsObject.js" ></script>
+	// some valid! xml data
+	var xmlString = ...
 	
-	<script type="text/javascript">
-		...
-		// some valid! xml data
-		var xmlString = ...
-		
-		// convert it into a js-object using the default "Smart-Mode"
-		var jsObject = XmlStringToJsObject(xmlString);
-	
-		// show the content
-		console.log(jsObject);
-	</script>
-	...
-	</head>
+	// convert it into a js-object using the default "Smart-Mode"
+	var jsObject = XmlStringToJsObject(xmlString);
+
+	// show the content
+	console.log(jsObject);
+</script>
+...
+</head>
 ```
 
 Example.html Code
@@ -56,32 +57,34 @@ The working example can be found [here](http://static.andidittrich.de/XmlToJsObj
 Note: The Example requires MooTools (used to access the DOM Elements); JSON.stringify is supported by all modern browsers
 
 ```js
-	window.addEvent('domready', function(){
-		// get local stored xml testdata
-		var testdata1 = document.id('Testdata1').get('text');
-		var testdata2 = document.id('Testdata2').get('text');
+window.addEvent('domready', function(){
+	// get local stored xml testdata
+	var testdata1 = document.id('Testdata1').get('text');
+	var testdata2 = document.id('Testdata2').get('text');
 
-		// covnvert testdata to Js Object (Normal Mode + Smart Mode)
-		var dataObject1normal = XmlStringToJsObject(testdata1, false);
-		var dataObject1smart = XmlStringToJsObject(testdata1, true);
-		
-		// covnvert testdata to Js Object (Smart Mode default)
-		var dataObject2 = XmlStringToJsObject(testdata2);
-		
-		// Display Human-Readable Objects
-		document.id('output1').set('text', JSON.stringify(dataObject1smart, null, 4));
-		document.id('output2').set('text', JSON.stringify(dataObject1normal, null, 4));
-		document.id('output3').set('text', JSON.stringify(dataObject2, null, 4));
-	});
+	// covnvert testdata to Js Object (Normal Mode + Smart Mode)
+	var dataObject1normal = XmlStringToJsObject(testdata1, false);
+	var dataObject1smart = XmlStringToJsObject(testdata1, true);
+	
+	// covnvert testdata to Js Object (Smart Mode default)
+	var dataObject2 = XmlStringToJsObject(testdata2);
+	
+	// Display Human-Readable Objects
+	document.id('output1').set('text', JSON.stringify(dataObject1smart, null, 4));
+	document.id('output2').set('text', JSON.stringify(dataObject1normal, null, 4));
+	document.id('output3').set('text', JSON.stringify(dataObject2, null, 4));
+});
 ```
 
 Available Methods
 -----------------
-**Description:** Converts a XMLDocument Node into a Javascript-Object
+
+### XmlToJsObject
 
 ```js
-	XmlToJsObject(xmlNode [, smartMode=true])
+XmlToJsObject(xmlNode [, smartMode=true])
 ```
+**Description:** Converts a XMLDocument Node into a Javascript-Object
 
 **xmlNode**
 Type: [DOM Node](http://www.w3schools.com/dom/dom_node.asp)
@@ -91,12 +94,12 @@ A DOM Node Object containing various child nodes and attributes
 Type: [Boolean](http://www.w3schools.com/js/js_datatypes.asp)
 Optional (default=**true**) - Merge attribute names with node-names
 
-
-**Description:** Converts a XML String directly into a Javascript-Object
+### XmlStringToJsObject
 
 ```js
-	XmlStringToJsObject(xmlStringData [, smartMode=true])
+XmlStringToJsObject(xmlStringData [, smartMode=true])
 ```
+**Description:** Converts a XML String directly into a Javascript-Object
 
 **xmlStringData**
 Type: [String](http://www.w3schools.com/js/js_obj_string.asp)
