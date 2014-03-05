@@ -141,7 +141,7 @@ XmlToJsObject(data [, smartMode=true])
 **Description:** Converts a XML-String, XMLNode or XMLDocument into a Javascript-Object
 
 **data**
-Type: mixed (String)[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String], (XMLDocument)[https://developer.mozilla.org/en-US/docs/Web/API/Node], (XMLNode)[https://developer.mozilla.org/en-US/docs/Web/API/Node]
+Type: mixed ( [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String), [XMLDocument](https://developer.mozilla.org/en-US/docs/Web/API/Node), [XMLNode](https://developer.mozilla.org/en-US/docs/Web/API/Node) )
 A valid XML-String, XMLNode or XMLDocument Node containing various child nodes and attributes
 	
 **smartMode**
@@ -157,7 +157,7 @@ Object.fromXML(data [, smartMode=true])
 **Description:** Converts a XML-String, XMLNode or XMLDocument into a Javascript-Object
 
 **data**
-Type: mixed (String)[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String], (XMLDocument)[https://developer.mozilla.org/en-US/docs/Web/API/Node], (XMLNode)[https://developer.mozilla.org/en-US/docs/Web/API/Node]
+Type: mixed ( [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String), [XMLDocument](https://developer.mozilla.org/en-US/docs/Web/API/Node), [XMLNode](https://developer.mozilla.org/en-US/docs/Web/API/Node) )
 A valid XML-String, XMLNode or XMLDocument Node containing various child nodes and attributes
 	
 **smartMode**
