@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<!-- 
+		XmlToJsObject Demopage + Examples
+		@author Andi Dittrich
+		@version 1.0
+	 -->
+		
+	<!-- force charset !-->
+	<meta charset="utf-8" />
+
+	<!-- page title !-->
+	<title>MooTools Object.fromXML Demopage + Examples</title>
+	<link type="text/css" rel="stylesheet" href="Resources/Example.css">
+	<link type="text/css" rel="stylesheet" href="Resources/EnlighterJS.yui.css">
+	
+	<!-- MooTools only required for this Examples! -->
+	<script type="text/javascript" src="Resources/mootools-core-1.4.5-full-nocompat-yc.js"></script>
+	<script type="text/javascript" src="Resources/mootools-more-1.4.0.1.js"></script>
+	<script type="text/javascript" src="Resources/EnlighterJS.yui.js"></script>	
+	
+	<!-- XmlToJsObject Utility - this is the ONLY REQUIRED file ;) -->
+	<script type="text/javascript" src="XmlToJsObject.js"></script>
+	<script type="text/javascript" src="Source/MooTools.js"></script>
+
+	<!-- Example Code -->	
+	<script type="text/javascript" id="JSCode">
+		window.addEvent('domready', function(){
+			// get local stored testdata
+			var testdata1 = document.id('Testdata1').get('text');
+			
+			// == Example 1 ===============================================
+			// covnvert testdata to Js Object (Normal Mode + Smart Mode)
+			var dataObject1 = Object.fromXML(testdata1);
+			
+			// Display Human-Readable Objects
+			document.id('output1').set('text', JSON.stringify(dataObject1, null, 4));
+			
+			// == Example 2 ===============================================
+			// get testdata as DOM-Element-Node and covnvert it into Js Object (Normal Mode)
+			var domNode = (new DOMParser()).parseFromString(testdata1, 'text/xml').firstChild;
+			var dataObject2 = Object.fromXML(domNode, false);
+			
+			// Display Human-Readable Objects
+			document.id('output2').set('text', JSON.stringify(dataObject2, null, 4));
+			
+			// == Example 3 ===============================================
+			// create new xhr request
+			var myRequest = new Request({
+			    url: 'Resources/Testdata2.xml',
+			    method: 'get',
+			    onSuccess: function(responseText, responseXMLDocument){
+					// directly convert a XML Document
+					var dataObject3 = Object.fromXML(responseXMLDocument);
+			        
+					// Display Human-Readable Objects
+					document.id('output3').set('text', JSON.stringify(dataObject3, null, 4));
+			    } 
+			});
+			myRequest.send();
+			
+			// == Show Example Code ===============================================
+			document.id('codeOutput').set('text', document.id('JSCode').get('text').replace(/^\t\t/gm, ''));
+			// Highlight Example Code
+			document.id('codeOutput').light({language: 'js', theme: 'git'});
+		});
+	</script>
+</head>
+<body>
+	<h1>MooTools Object.fromXML Example</h1>
+	<p>RAW XML Data: <a href="Resources/Testdata1.xml">Simple Example (1+2)</a>, <a href="Resources/Testdata2.xml">Complex Example (3)</a></p>
+	<p>Syntax Highlighting provided by <a href="https://github.com/AndiDittrich/EnlighterJS">EnlighterJS</a></p>
+	
+	<h2>Example Code of this Page:</h2>
+	<pre id="codeOutput"></pre>
+	
+	<h2>Example 1 (Smart Mode, Input Type String)</h2>
+	<pre id="output1"></pre>
+	
+	<h2>Example 2 (Normal Mode, Input Type DOM Node Element)</h2>
+	<pre id="output2"></pre>
+	
+	<h2>Example 3 (Smart Mode, Input Type Request.XHR)</h2>
+	<pre id="output3"></pre>
+
+	<!-- Included Textdata -->
+	<script type="text/template" id="Testdata1"><?xml version="1.0" encoding="UTF-8"?>
+<building name="GlobalDynamics Main Building" id="0xFA8A91C6617DFA1B">
+	<group level="2">
+		<room number="123">Conference Room A</room>
+		<room number="124">Conference Room B</room>
+		<room number="125">Conference Room C</room>
+		<room number="126">Conference Room D</room>
+	</group>
+	<group level="2">
+		<room number="17">John's Office</room>
+		<room number="19">Eric's Office</room>
+	</group>
+	<group level="1">
+		<room number="091">Mainframe Housing A</room>
+		<room number="092">Mainframe Housing B</room>
+		<room number="090">Mainframe Power Supply Station</room>
+		<room number="089">Mainframe Backup Power Supply Station</room>
+	</group>
+	<group level="8">
+		<room number="1717" role="cto">CTO Office</room>
+		<room number="1819" role="ceo">CEO Office</room>
+		<room number="1820" role="cfo">CFO Office</room>
+	</group>
+</building>
+	</script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+# Forge
+name: Object.fromXML
+author: andidittrich
+category: Native
+tags: [xml, parser, object, native, utility]
+demo: http://static.andidittrich.de/XmlToJsObject/Example.MooTools.html
+current: v1.1

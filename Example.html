@@ -14,39 +14,50 @@
 	<!-- page title !-->
 	<title>XmlToJsObject Demopage + Examples</title>
 	<link type="text/css" rel="stylesheet" href="Resources/Example.css">
+	<link type="text/css" rel="stylesheet" href="Resources/EnlighterJS.yui.css">
 	
 	<!-- MooTools only required for this Examples! -->
 	<script type="text/javascript" src="Resources/mootools-core-1.4.5-full-nocompat-yc.js"></script>
 	<script type="text/javascript" src="Resources/mootools-more-1.4.0.1.js"></script>
+	<script type="text/javascript" src="Resources/EnlighterJS.yui.js"></script>	
 	
 	<!-- XmlToJsObject Utility - this is the ONLY REQUIRED file ;) -->
 	<script type="text/javascript" src="XmlToJsObject.js"></script>
 
 	<!-- Example Code -->	
-	<script type="text/javascript">
+	<script type="text/javascript" id="JSCode">
 		window.addEvent('domready', function(){
 			// get local stored testdata
 			var testdata1 = document.id('Testdata1').get('text');
 			var testdata2 = document.id('Testdata2').get('text');
 
 			// covnvert testdata to Js Object (Normal Mode + Smart Mode)
-			var dataObject1normal = XmlStringToJsObject(testdata1, false);
-			var dataObject1smart = XmlStringToJsObject(testdata1, true);
+			var dataObject1normal = XmlToJsObject(testdata1, false);
+			var dataObject1smart = XmlToJsObject(testdata1, true);
 			
 			// covnvert testdata to Js Object (Smart Mode default)
-			var dataObject2 = XmlStringToJsObject(testdata2);
+			var dataObject2 = XmlToJsObject(testdata2);
 			
 			// Display Human-Readable Objects
 			document.id('output1').set('text', JSON.stringify(dataObject1smart, null, 4));
 			document.id('output2').set('text', JSON.stringify(dataObject1normal, null, 4));
 			document.id('output3').set('text', JSON.stringify(dataObject2, null, 4));
+			
+			// == Show Example Code ===============================================
+			document.id('codeOutput').set('text', document.id('JSCode').get('text').replace(/^\t\t/gm, ''));
+			// Highlight Example Code
+			document.id('codeOutput').light({language: 'js', theme: 'git'});
 		});
 	</script>
 </head>
 <body>
-	<h1>XmlToJsObject Example</h1>
+	<h1>Native XmlToJsObject Example</h1>
 	
 	<p>RAW XML Data: <a href="Resources/Testdata1.xml">Simple Example (1+2)</a>, <a href="Resources/Testdata2.xml">Complex Example (3)</a></p>
+	<p>Syntax Highlighting provided by <a href="https://github.com/AndiDittrich/EnlighterJS">EnlighterJS</a></p>
+	
+	<h2>Example Code of this Page:</h2>
+	<pre id="codeOutput"></pre>
 	
 	<h2>Simple Example 1 (Smart Mode)</h2>
 	<pre id="output1"></pre>
