@@ -18,6 +18,7 @@ demo3: http://static.andidittrich.de/XmlToJsObject/Example.Minimal.html
 provides:
   - XmlToJsObject
   - Object.fromXML (MooTools)
+
 ...
  */
 /**

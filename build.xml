@@ -8,17 +8,22 @@
 	
 !-->
 <project name="XmlToJsObject" default="build" basedir=".">
-		
+			
 	<!-- Target Properties ! -->
 	<property name="yui.jar" value="Util/yuicompressor-2.4.7.jar" />
-
+	<property name="build.dir" value="Build/" />
+	
 	<!-- Generate Build -->
 	<target name="build">
+		<!-- Cleanup Build Dir -->
+		<delete dir="${build.dir}" />
+		<mkdir dir="${build.dir}"/>
+		
 		<!-- Compressing Files -->
 		<echo message="Compressing XmlToJsObject.." />
 		<java jar="${yui.jar}" fork="true">
-			<arg line="XmlToJsObject.js" />
-			<arg line="-o XmlToJsObject.yui.js" />
+			<arg line="Source/XmlToJsObject.js" />
+			<arg line="-o ${build.dir}XmlToJsObject.yui.js" />
 			<arg line="--line-break 400" />
 			<arg line="--type js" />
 		</java>

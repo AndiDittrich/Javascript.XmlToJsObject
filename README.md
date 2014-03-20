@@ -32,7 +32,7 @@ This is a minimal example how to convert a XML-String into a Javascript Object (
 <head>
 ...
 <!-- Include XmlToJsObject -->
-<script type="text/javascript" src="XmlToJsObject.js"></script>
+<script type="text/javascript" src="Build/XmlToJsObject.yui.js"></script>
 
 <!-- Example Code -->	
 <script type="text/javascript">
