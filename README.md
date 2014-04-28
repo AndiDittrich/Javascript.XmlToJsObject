@@ -175,7 +175,7 @@ Tested With
 
 
 Browser compatibility
--------------
+---------------------
 The XmlToJsObject Utility requires the [DOMParser](http://www.w3schools.com/dom/dom_parser.asp) object. If you want to support earlier versions of the InternetExplorer you can write a [fallback](http://www.w3schools.com/dom/dom_parser.asp) using `new ActiveXObject("Microsoft.XMLDOM")` instead of the DOMParser.
 
 Compatibility Reference: [https://developer.mozilla.org/en-US/docs/Web/API/DOMParser](https://developer.mozilla.org/en-US/docs/Web/API/DOMParser)
