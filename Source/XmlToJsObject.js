@@ -1,4 +1,4 @@
-/*!
+/*
 ---
 name: XmlToJsObject
 description: Smart XML-Document to Javascript-Object converter
