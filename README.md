@@ -28,32 +28,32 @@ Minimal Example
 ---------------
 This is a minimal example how to convert a XML-String into a Javascript Object (Pure Javascript Version)
 
-```html
-<head>
-...
-<!-- Include XmlToJsObject -->
-<script type="text/javascript" src="Build/XmlToJsObject.yui.js"></script>
+	#HTML
+	<head>
+	...
+	<!-- Include XmlToJsObject -->
+	<script type="text/javascript" src="Build/XmlToJsObject.yui.js"></script>
+	
+	<!-- Example Code -->	
+	<script type="text/javascript">
+		window.onload = (function(){
+			// some valid! xml data given as string/xml-node/xml-document
+			var testdata = ...
+	
+			// covnvert testdata to Js-Object (Smart Mode)
+			var dataObject = XmlToJsObject(testdata);
+											
+			// Display Human-Readable Object
+			document.getElementById('output').innerHTML = JSON.stringify(dataObject, null, 4);
+		});
+	</script>
+	...
+	</head>
+	<body>
+	...
+	<pre id="output"></pre>
+	...
 
-<!-- Example Code -->	
-<script type="text/javascript">
-	window.onload = (function(){
-		// some valid! xml data given as string/xml-node/xml-document
-		var testdata = ...
-
-		// covnvert testdata to Js-Object (Smart Mode)
-		var dataObject = XmlToJsObject(testdata);
-										
-		// Display Human-Readable Object
-		document.getElementById('output').innerHTML = JSON.stringify(dataObject, null, 4);
-	});
-</script>
-...
-</head>
-<body>
-...
-<pre id="output"></pre>
-...
-```
 
 MooTools Examples
 -----------------
