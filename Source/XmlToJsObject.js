@@ -4,11 +4,11 @@ name: XmlToJsObject
 description: Smart XML-Document to Javascript-Object converter
 
 license: MIT-style X11 License
-version: 1.0
+version: 1.2
 
 authors:
   - Andi Dittrich
-  
+
 download: https://github.com/AndiDittrich/Javascript.XmlToJsObject
 website: http://www.a3non.org/go/XmlToJsObject
 demo: http://static.andidittrich.de/XmlToJsObject/Example.MooTools.html
@@ -18,9 +18,8 @@ demo3: http://static.andidittrich.de/XmlToJsObject/Example.Minimal.html
 provides:
   - XmlToJsObject
   - Object.fromXML (MooTools)
-
 ...
- */
+*/
 /**
  * Converts a XML-String/XMLDocument/XMLNode into a Javascript-Object
  */
