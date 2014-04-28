@@ -5,3 +5,4 @@ category: Native
 tags: [xml, parser, object, native, utility]
 docs: https://github.com/AndiDittrich/Javascript.XmlToJsObject/blob/master/README.md
 demo: http://static.andidittrich.de/XmlToJsObject/Example.MooTools.html
+current: v1.2

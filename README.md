@@ -60,7 +60,7 @@ MooTools Examples
 
 How to use
 ----------
-Example, how to use XmlToJsObject with MooTools ([Example.MooTools.html](Example.MooTools.html))
+Example, how to use XmlToJsObject with MooTools ([http://static.andidittrich.de/XmlToJsObject/Example.MooTools.html](Example.MooTools.html))
 
 	#JS
 	window.addEvent('domready', function(){
